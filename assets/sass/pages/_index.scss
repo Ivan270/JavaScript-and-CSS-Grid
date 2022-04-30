@@ -1,0 +1,106 @@
+.grid{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    grid-gap: 3px;
+}
+.empty{
+    grid-column: span 12;
+    grid-row: span 1;
+}
+.empty-2{
+    display: none;
+}
+.empty-3{
+    display: none;
+}
+.empty-4{
+    display: none;
+}
+.operaciones{
+    grid-column: span 12;
+    grid-row: span 3;
+    @include flex-center(center, 30px);
+    h1 {
+        transition: transform 0.3s linear;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+.temperaturas{
+    grid-column: span 6;
+    grid-row: span 4;
+    @include flex-center(flex-end, 10px);
+}
+.semanas{
+    grid-column: span 6;
+    grid-row: span 4;
+    @include flex-center(flex-start, 10px);
+}
+.cinco-numeros{
+    grid-column: span 12;
+    grid-row: span 4;
+    @include flex-center(center, 30px);
+}
+@include respond-to($bp-md){
+    .empty{
+        display: block;
+        grid-column: 1 / 4;
+        grid-row: 1 / 6;
+    }
+    .operaciones{
+        grid-column: 4 / 13;
+        grid-row: 1 / 7;
+        justify-content: flex-end;
+        text-align: end;
+        h1 {
+            width: 50%;
+            transition: transform 0.3s linear;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .temperaturas{
+        grid-column: 1 / 4;
+        grid-row: 6 / 8;
+        @include flex-center(center, 30px);
+        text-align: center;
+        h1 {
+            animation: move 2s ease-in-out 2s infinite alternate ;
+        }
+        
+    }
+    .empty-2{
+        display:block;
+        grid-column: 1 / 4;
+        grid-row: 8 / 13;
+    }
+    .semanas{
+        grid-column: 4 / 7;
+        grid-row: 7 / 11;
+        @include flex-center(center, 30px);
+        text-align: center;
+    }
+    .cinco-numeros{
+        grid-column: 9 / 13;
+        grid-row: 7 / 13;
+        padding: 0px 15px 15px 75px;
+        display: flex;
+        align-items: flex-end;
+        text-align: end;
+    }
+    .empty-3{
+        display: block;
+        grid-column: 4 / 9;
+        grid-row: 11 / 13;
+    }
+    .empty-4{
+        display: block;
+        grid-column: 7 / 9;
+        grid-row: 7 / 11;
+    }
+}

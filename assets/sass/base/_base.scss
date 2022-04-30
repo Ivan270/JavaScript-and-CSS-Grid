@@ -1,0 +1,42 @@
+body{
+    font-family: $inconsolata;
+    font-weight: $light;
+    font-size: 8px;
+}
+.operaciones {
+    background-color: $bg-dark;
+    color: $white;
+}
+.temperaturas{
+    background-color: $bg-xdark;
+    color: $white;
+}
+.semanas{
+    background-color: $bg-light;
+    color: $white;
+}
+.cinco-numeros{
+    background-color: $bg-dark-orange;
+    color: $white;
+}
+.empty{
+    background-color: $bg-empty;
+}
+.empty-2{
+    background-color: $bg-yellow;
+}
+.empty-3{
+    background-color: $bg-carmesi;
+}
+.empty-4{
+    background-color:$bg-yellow;
+}
+
+// Animations
+@keyframes move {
+    0% {margin-left: 0;}
+    33% {margin-left: 1em;}
+    66% {margin-left:0;}
+    100% {margin-left:1em;}
+    
+}

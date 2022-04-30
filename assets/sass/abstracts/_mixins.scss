@@ -1,0 +1,11 @@
+@mixin respond-to($breakpoint){
+    @media(min-width:$breakpoint){
+        @content
+    }
+};
+
+@mixin flex-center($align, $padding){
+    display: flex;
+    align-items: $align;
+    padding: $padding;
+};
