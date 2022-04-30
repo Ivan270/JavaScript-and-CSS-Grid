@@ -35,8 +35,8 @@ body{
 // Animations
 @keyframes move {
     0% {margin-left: 0;}
-    33% {margin-left: 1em;}
+    33% {margin-left: 0.5em;}
     66% {margin-left:0;}
-    100% {margin-left:1em;}
+    100% {margin-left:0.5em;}
     
 }
